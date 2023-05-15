@@ -10,14 +10,14 @@
 
 ## installation LARAVEL 
 
-git clone https://github.com/HMIF-UNSRI/websitehmif-be.git
-cd websitehmif-be
-composer install
-npm install
-copy .env.example .env
-php artisan key:generate
-php artisan migrate
-npm run dev
-php artisan serve
+- git clone https://github.com/HMIF-UNSRI/websitehmif-be.git
+- cd websitehmif-be
+- composer install
+- npm install
+- copy .env.example .env
+- php artisan key:generate
+- php artisan migrate
+- npm run dev
+- php artisan serve
 
 

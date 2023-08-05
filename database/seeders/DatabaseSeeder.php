@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
-            DepartementSeeder::class
+            DepartementSeeder::class,
+            DivisionSeeder::class
         ]);
     }
 }

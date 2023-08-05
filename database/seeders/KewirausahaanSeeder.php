@@ -25,7 +25,7 @@ class KewirausahaanSeeder extends Seeder
         Committee::create([
             'name' => 'Nila Sonia',
             'position' => 'Wakil Kepala Dinas',
-            'photo' => 'kwu/staff/nila_sonia.png',
+            'photo' => 'kwu/bph/nila_sonia.png',
             'departement_id' => Helper::getDepartementId('Kewirausahaan')
         ]);
 

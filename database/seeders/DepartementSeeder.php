@@ -32,7 +32,7 @@ class DepartementSeeder extends Seeder
         Departement::create([
             'name' => 'Kastrad',
             'logo' => 'kastrad/logo-kastrad.png',
-            'description' => 'Kastrad adalah dinas yang mengurusi hal-hal yang berkenaan dengan Propaganda serta Advokasi kampus, seperti mengkaji isu-isu yang ada, menampung aspirasi, serta menjadi wadah demi terwujudnya AKSI (Aksi, Kritis, Sejahtera, dan Inovatif).'
+            'description' => 'Kastrad (Kajian Strategis dan Advokasi) adalah dinas yang mengurusi hal-hal yang berkenaan dengan Propaganda serta Advokasi kampus, seperti mengkaji isu-isu yang ada, menampung aspirasi, serta menjadi wadah demi terwujudnya AKSI (Aksi, Kritis, Sejahtera, dan Inovatif).'
         ]);
 
         Departement::create([

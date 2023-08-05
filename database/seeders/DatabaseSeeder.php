@@ -24,6 +24,14 @@ class DatabaseSeeder extends Seeder
             DepartementSeeder::class,
             DivisionSeeder::class,
             WorkProgramSeeder::class,
+            AdministrasiSeeder::class,
+            AkademikSeeder::class,
+            IntiSeeder::class,
+            KastradSeeder::class,
+            KominfoSeeder::class,
+            KewirausahaanSeeder::class,
+            PmbSeeder::class,
+            PsdmSeeder::class
         ]);
     }
 }

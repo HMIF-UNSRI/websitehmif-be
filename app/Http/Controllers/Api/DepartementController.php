@@ -100,4 +100,29 @@ class DepartementController extends Controller
             'staff' => $staff,
         ]);
     }
+
+    /**
+     * Get Kominfo Data
+     * 
+     * Endpoint ini digunakan untuk mendapatkan data dari dinas kominfo.
+     */
+    public function kominfo()
+    {
+        $kominfo = Departement::where('alias', 'Kominfo')->firstOrFail();
+
+        $divisi = Helper::getDivisionsData($kominfo);
+        $prokerUnggulan = Helper::getWorkProgramsData($kominfo);
+        $bph = Helper::getMembersData($kominfo, 'committees');
+        $staff = Helper::getMembersData($kominfo, 'staffs');
+
+        return response()->json([
+            'nama' => $kominfo->name,
+            'logo' => env('APP_URL') . Storage::url($kominfo->logo),
+            'deskripsi' => $kominfo->description,
+            'divisi' => $divisi,
+            'proker_unggulan' => $prokerUnggulan,
+            'bph' => $bph,
+            'staff' => $staff,
+        ]);
+    }
 }

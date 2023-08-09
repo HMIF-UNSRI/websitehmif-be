@@ -10,30 +10,55 @@ use Illuminate\Support\Facades\Storage;
 class DepartementController extends Controller
 {
     /**
-     * Get Data Inti
+     * Get Inti Data
      * 
      * Endpoint ini digunakan untuk mendapatkan data dari dinas inti.
      */
     public function inti()
     {
-        $akademik = Departement::where('name', 'Inti')->firstOrFail();
+        $inti = Departement::where('alias', 'Inti')->firstOrFail();
 
-        $bph = Helper::getMembersData($akademik, 'committees');
+        $bph = Helper::getMembersData($inti, 'committees');
 
         return response()->json([
-            'nama' => $akademik->name,
+            'nama' => $inti->name,
             'bph' => $bph,
         ]);
     }
 
     /**
-     * Get Data Akademik
+     * Get Administrasi Data
+     * 
+     * Endpoint ini digunakan untuk mendapatkan data dari dinas administrasi.
+     */
+    public function administrasi()
+    {
+        $adm = Departement::where('alias', 'ADM')->firstOrFail();
+
+        $divisi = Helper::getDivisionsData($adm);
+        $prokerUnggulan = Helper::getWorkProgramsData($adm);
+        $bph = Helper::getMembersData($adm, 'committees');
+        $staff = Helper::getMembersData($adm, 'staffs');
+
+        return response()->json([
+            'nama' => $adm->name,
+            'logo' => env('APP_URL') . Storage::url($adm->logo),
+            'deskripsi' => $adm->description,
+            'divisi' => $divisi,
+            'proker_unggulan' => $prokerUnggulan,
+            'bph' => $bph,
+            'staff' => $staff,
+        ]);
+    }
+
+    /**
+     * Get Akademik Data
      * 
      * Endpoint ini digunakan untuk mendapatkan data dari dinas akademik.
      */
     public function akademik()
     {
-        $akademik = Departement::where('name', 'Akademik')->firstOrFail();
+        $akademik = Departement::where('alias', 'Akademik')->firstOrFail();
 
         $divisi = Helper::getDivisionsData($akademik);
         $prokerUnggulan = Helper::getWorkProgramsData($akademik);

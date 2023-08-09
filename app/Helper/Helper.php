@@ -51,7 +51,17 @@ class Helper
             ->get()
             ->map(function ($item) {
                 $divisionName = $item->division ? $item->division->alias : null;
-                $position = $item->position . ($divisionName ? " " . $divisionName : " " . $item->departement->alias);
+
+                if ($item->position == 'Staff') {
+                    $position = $item->position . ($divisionName ? " Divisi " . $divisionName : " Dinas " . $item->departement->alias);
+                } else {
+                    if ($item->departement->alias == 'Inti') {
+                        $position = $item->position;
+                    } else {
+                        $position = $item->position . ($divisionName ? " " . $divisionName : " " . $item->departement->alias);
+                    }
+                }
+                
                 return [
                     'nama' => $item->name,
                     'jabatan' => $position,

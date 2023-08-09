@@ -17,14 +17,14 @@ class KewirausahaanSeeder extends Seeder
     {
         Committee::create([
             'name' => 'Siti Maritza Aqila',
-            'position' => 'Kepala Dinas',
+            'position' => 'Kadin',
             'photo' => 'kwu/bph/siti_maritza_aqila.png',
             'departement_id' => Helper::getDepartementId('Kewirausahaan')
         ]);
 
         Committee::create([
             'name' => 'Nila Sonia',
-            'position' => 'Wakil Kepala Dinas',
+            'position' => 'Wakadin',
             'photo' => 'kwu/bph/nila_sonia.png',
             'departement_id' => Helper::getDepartementId('Kewirausahaan')
         ]);

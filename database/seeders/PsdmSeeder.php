@@ -17,14 +17,14 @@ class PsdmSeeder extends Seeder
     {
         Committee::create([
             'name' => 'M. Riza Pahlevi',
-            'position' => 'Kepala Dinas',
+            'position' => 'Kadin',
             'photo' => 'psdm/bph/m_riza_pahlevi.png',
             'departement_id' => Helper::getDepartementId('Pengembangan Sumber Daya Manusia')
         ]);
 
         Committee::create([
             'name' => 'Cinta Indriyani Putri Nabila',
-            'position' => 'Wakil Kepala Dinas',
+            'position' => 'Wakadin',
             'photo' => 'psdm/bph/cinta_indriyani_putri_nabila.png',
             'departement_id' => Helper::getDepartementId('Pengembangan Sumber Daya Manusia')
         ]);

@@ -17,14 +17,14 @@ class PmbSeeder extends Seeder
     {
         Committee::create([
             'name' => 'Sultan Rafi Lukmanul Hakim',
-            'position' => 'Kepala Dinas',
+            'position' => 'Kadin',
             'photo' => 'pmb/bph/sultan_rafi_lukmanul_hakim.png',
             'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat')
         ]);
 
         Committee::create([
             'name' => 'Aqshal Dinata Ramja',
-            'position' => 'Kepala',
+            'position' => 'Kadiv',
             'photo' => 'pmb/bph/aqshal_dinata_ramja.png',
             'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
             'division_id' => Helper::getDivisionId('Seni')
@@ -32,7 +32,7 @@ class PmbSeeder extends Seeder
 
         Committee::create([
             'name' => 'Rayhan Muhammad Ilham',
-            'position' => 'Kepala Divisi',
+            'position' => 'Kadiv',
             'photo' => 'pmb/bph/rayhan_muhammad_ilham.png',
             'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
             'division_id' => Helper::getDivisionId('Olahraga')

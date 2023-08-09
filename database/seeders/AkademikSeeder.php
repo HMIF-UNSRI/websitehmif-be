@@ -17,21 +17,21 @@ class AkademikSeeder extends Seeder
     {
         Committee::create([
             'name' => 'Kiagus Muhammad Efan Fitriyan',
-            'position' => 'Kepala Dinas',
+            'position' => 'Kadin',
             'photo' => 'akademik/bph/kiagus_muhammad_efan_fitriyan.png',
             'departement_id' => Helper::getDepartementId('Akademik')
         ]);
 
         Committee::create([
             'name' => 'Mahendra Dinata',
-            'position' => 'Wakil Kepala Dinas',
+            'position' => 'Wakadin',
             'photo' => 'akademik/bph/mahendra_dinata.png',
             'departement_id' => Helper::getDepartementId('Akademik')
         ]);
 
         Committee::create([
             'name' => 'Dewa Sheva Dzaky',
-            'position' => 'Kepala Divisi',
+            'position' => 'Kadiv',
             'photo' => 'akademik/bph/dewa_sheva_dzaky.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
             'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
@@ -39,7 +39,7 @@ class AkademikSeeder extends Seeder
 
         Committee::create([
             'name' => 'Jovanic Morgan',
-            'position' => 'Kepala Divisi',
+            'position' => 'Kadiv',
             'photo' => 'akademik/bph/jovanic_morgan.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
             'division_id' => Helper::getDivisionId('Pengembangan Ilmu Pengetahuan (PIP)')

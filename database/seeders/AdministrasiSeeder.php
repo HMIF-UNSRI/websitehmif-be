@@ -17,14 +17,14 @@ class AdministrasiSeeder extends Seeder
     {
         Committee::create([
             'name' => 'Nabilla Yesikal',
-            'position' => 'Kepala Dinas',
+            'position' => 'Kadin',
             'photo' => 'administrasi/bph/nabilla_yesikal.png',
             'departement_id' => Helper::getDepartementId('Administrasi')
         ]);
 
         Committee::create([
             'name' => 'Widya Fitriani',
-            'position' => 'Wakil Kepala Dinas',
+            'position' => 'Wakadin',
             'photo' => 'administrasi/bph/widya_fitriani.png',
             'departement_id' => Helper::getDepartementId('Administrasi')
         ]);

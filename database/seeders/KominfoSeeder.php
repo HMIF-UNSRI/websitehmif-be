@@ -17,21 +17,21 @@ class KominfoSeeder extends Seeder
     {
         Committee::create([
             'name' => 'Tiara Cinta Azzahra',
-            'position' => 'Kepala Dinas',
+            'position' => 'Kadin',
             'photo' => 'kominfo/bph/tiara_cinta_azzahra.png',
             'departement_id' => Helper::getDepartementId('Kominfo')
         ]);
 
         Committee::create([
             'name' => 'Adys Syakhira Maharani',
-            'position' => 'Wakil Kepala Dinas',
+            'position' => 'Wakadin',
             'photo' => 'kominfo/bph/adys_syakhira_maharani.png',
             'departement_id' => Helper::getDepartementId('Kominfo')
         ]);
 
         Committee::create([
             'name' => 'Yolendri Anisyahfitri',
-            'position' => 'Kepala Divisi',
+            'position' => 'Kadiv',
             'photo' => 'kominfo/bph/yolendri_anisyahfitri.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
             'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
@@ -39,7 +39,7 @@ class KominfoSeeder extends Seeder
 
         Committee::create([
             'name' => 'Elan Abdul Hakim',
-            'position' => 'Kepala Divisi MULMED',
+            'position' => 'Kadiv',
             'photo' => 'kominfo/bph/elan_abdul_hakim.png',
             'departement_id' => Helper::getDepartementId('Kominfo')
         ]);

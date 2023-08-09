@@ -17,21 +17,21 @@ class KastradSeeder extends Seeder
     {
         Committee::create([
             'name' => 'Anharul Zikri',
-            'position' => 'Kepala Dinas',
+            'position' => 'Kadin',
             'photo' => 'kastrad/bph/anharul_zikri.png',
             'departement_id' => Helper::getDepartementId('Kastrad')
         ]);
 
         Committee::create([
             'name' => 'Della Susanti',
-            'position' => 'Wakil Kepala Dinas',
+            'position' => 'Wakadin',
             'photo' => 'kastrad/bph/della_susanti.png',
             'departement_id' => Helper::getDepartementId('Kastrad')
         ]);
 
         Committee::create([
             'name' => 'M. Rusnan Arkan',
-            'position' => 'Kepala Divisi',
+            'position' => 'Kadiv',
             'photo' => 'kastrad/bph/m_rusnan_arkan.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
             'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
@@ -39,7 +39,7 @@ class KastradSeeder extends Seeder
 
         Committee::create([
             'name' => 'M. Fairuz Abadi',
-            'position' => 'Kepala Divisi',
+            'position' => 'Kadiv',
             'photo' => 'kastrad/bph/m_fairuz_abadi.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
             'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')

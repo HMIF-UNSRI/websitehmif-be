@@ -19,84 +19,84 @@ class AdministrasiSeeder extends Seeder
             'name' => 'Nabilla Yesikal',
             'position' => 'Kadin',
             'photo' => 'administrasi/bph/nabilla_yesikal.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Committee::create([
             'name' => 'Widya Fitriani',
             'position' => 'Wakadin',
             'photo' => 'administrasi/bph/widya_fitriani.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Aisyah Fitri',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/aisyah_fitri.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Alfina Dwi Rahmi',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/alfina_dwi_rahmi.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Annisa Reida Raheima',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/annisa_reida_raheima.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Fildzah Nur Izzati',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/fildzah_nur_izzati.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Hafiz Muhammad Kurniawan',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/hafiz_muhammad_kurniawan.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Louis Mince Nababan',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/louis_mince_nababan.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'M. Rafly Perdana Putra',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/m_rafly_perdana_putra.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Nur Hidayat',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/nur_hidayat.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Steven',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/steven.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         Staff::create([
             'name' => 'Zweta Anggun Syafara',
             'position' => 'Staff',
             'photo' => 'administrasi/staff/zweta_anggun_syafara.png',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
     }
 }

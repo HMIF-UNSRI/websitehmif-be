@@ -19,14 +19,14 @@ class PmbSeeder extends Seeder
             'name' => 'Sultan Rafi Lukmanul Hakim',
             'position' => 'Kadin',
             'photo' => 'pmb/bph/sultan_rafi_lukmanul_hakim.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat')
+            'departement_id' => Helper::getDepartementId('PMB')
         ]);
 
         Committee::create([
             'name' => 'Aqshal Dinata Ramja',
             'position' => 'Kadiv',
             'photo' => 'pmb/bph/aqshal_dinata_ramja.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Seni')
         ]);
 
@@ -34,7 +34,7 @@ class PmbSeeder extends Seeder
             'name' => 'Rayhan Muhammad Ilham',
             'position' => 'Kadiv',
             'photo' => 'pmb/bph/rayhan_muhammad_ilham.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Olahraga')
         ]);
 
@@ -42,7 +42,7 @@ class PmbSeeder extends Seeder
             'name' => 'Ahmad Bintara Mansur',
             'position' => 'Staff',
             'photo' => 'pmb/staff/ahmad_bintara_mansur.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Olahraga')
         ]);
 
@@ -50,7 +50,7 @@ class PmbSeeder extends Seeder
             'name' => 'Bagas Ramandari',
             'position' => 'Staff',
             'photo' => 'pmb/staff/bagas_ramandari.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Olahraga')
         ]);
 
@@ -58,7 +58,7 @@ class PmbSeeder extends Seeder
             'name' => 'Rizki Naufal Hafizh',
             'position' => 'Staff',
             'photo' => 'pmb/staff/rizki_naufal_hafizh.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Olahraga')
         ]);
 
@@ -66,7 +66,7 @@ class PmbSeeder extends Seeder
             'name' => 'Satria Dali Romadhon',
             'position' => 'Staff',
             'photo' => 'pmb/staff/satria_dali_romadhon.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Olahraga')
         ]);
 
@@ -74,7 +74,7 @@ class PmbSeeder extends Seeder
             'name' => 'Wahyu Nugraha',
             'position' => 'Staff',
             'photo' => 'pmb/staff/wahyu_nugraha.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Olahraga')
         ]);
 
@@ -82,7 +82,7 @@ class PmbSeeder extends Seeder
             'name' => 'Herlia Adella Salsabila',
             'position' => 'Staff',
             'photo' => 'pmb/staff/herlia_adella_salsabila.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Seni')
         ]);
 
@@ -90,7 +90,7 @@ class PmbSeeder extends Seeder
             'name' => 'Nico Karuna',
             'position' => 'Staff',
             'photo' => 'pmb/staff/nico_karuna.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Seni')
         ]);
 
@@ -98,7 +98,7 @@ class PmbSeeder extends Seeder
             'name' => 'Risma Melati',
             'position' => 'Staff',
             'photo' => 'pmb/staff/risma_melati.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Seni')
         ]);
 
@@ -106,7 +106,7 @@ class PmbSeeder extends Seeder
             'name' => 'Tubagus Muhammad Arsyah',
             'position' => 'Staff',
             'photo' => 'pmb/staff/tubagus_muhammad_arsyah.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Seni')
         ]);
 
@@ -114,7 +114,7 @@ class PmbSeeder extends Seeder
             'name' => 'Vera Meisantika',
             'position' => 'Staff',
             'photo' => 'pmb/staff/vera_meisantika.png',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat'),
+            'departement_id' => Helper::getDepartementId('PMB'),
             'division_id' => Helper::getDivisionId('Seni')
         ]);
     }

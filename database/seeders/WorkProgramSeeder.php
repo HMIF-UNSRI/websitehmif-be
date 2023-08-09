@@ -35,25 +35,25 @@ class WorkProgramSeeder extends Seeder
         WorkProgram::create([
             'name' => 'SEBLAK (Sharing Blak-blakan)',
             'description' => 'Suatu kegiatan yang bertujuan untuk membantu mahasiswa baru dalam memahami konsep algoritma dan pemrograman.',
-            'departement_id' => Helper::getDepartementId('Pengembangan Sumber Daya Manusia')
+            'departement_id' => Helper::getDepartementId('PSDM')
         ]);
 
         WorkProgram::create([
             'name' => 'Upgrading Staff dan BPH HMIF 2023',
             'description' => 'Merupakan suatu kegiatan yang dapat melatih dan membimbing Staf dan BPH HMIF dalam meningkatkan mutu dan kualitas diri. Kegiatan ini diharapkan dapat meningkatkan jiwa kepemimpinan Staf dan BPH HMIF, serta membentuk kepengurusan HMIF yang solid, unggul, terampil, dan kompeten.',
-            'departement_id' => Helper::getDepartementId('Pengembangan Sumber Daya Manusia')
+            'departement_id' => Helper::getDepartementId('PSDM')
         ]);
 
         WorkProgram::create([
             'name' => 'Ready for Professional Placement',
             'description' => 'Merupakan kegiatan untuk membantu mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya dalam mendapatkan wawasan secara menyeluruh mengenai mekanisme pelaksanaan Kerja Praktek (KP).',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         WorkProgram::create([
             'name' => 'Pelatihan Penyusunan Proposal',
             'description' => 'Hampir setiap program kerja membutuhkan proposal. Selain itu, pada semester akhir membutuhkan pengajuan proposal untuk melakukan penelitian. Oleh karena itu, diperlukan adanya pelatihan penyusunan proposal untuk mengetahui alur penyusunan dan pengajuan proposal.',
-            'departement_id' => Helper::getDepartementId('Administrasi')
+            'departement_id' => Helper::getDepartementId('ADM')
         ]);
 
         WorkProgram::create([
@@ -77,31 +77,31 @@ class WorkProgramSeeder extends Seeder
         WorkProgram::create([
             'name' => 'IF CUP',
             'description' => 'Merupakan Proker Lanjutan IF-Fun dimana merupakan wadah ajang Kompetisi untuk menunjukan kemampuan dan skill dalam Olahraga pada ruang Lingkup Keluarga IF.',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat')
+            'departement_id' => Helper::getDepartementId('PMB')
         ]);
 
         WorkProgram::create([
             'name' => 'IF LEGION',
             'description' => 'IF FUN Kegiatan yang dapat membantu mahasiswa/i untuk mendapatkan bimbingan ataupun arahan pada bidang seni maupun olahraga secara terjadwal.',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat')
+            'departement_id' => Helper::getDepartementId('PMB')
         ]);
 
         WorkProgram::create([
             'name' => 'IF FEST SENI',
             'description' => 'Merupakan kegiatan Perlomban di bidang seni yang di lakukan secara online yang memiliki beberapa cabang lomba seperti Cover Lagu, Doodle Art, dan Fotografi.',
-            'departement_id' => Helper::getDepartementId('Pengembangan Minat dan Bakat')
+            'departement_id' => Helper::getDepartementId('PMB')
         ]);
 
         WorkProgram::create([
             'name' => 'Bazar Festival',
             'description' => 'Mengadakan bazar penjualan makanan, minuman, merchandise secara langsung di Kambang Iwak, TVRI, dan tempat yang memungkinkan lainnya untuk pemasukan keuangan HMIF. Serta menjual makanan ringan untuk berbuka puasa dan kegiatan amal bersama selama hari Ramadhan dimana dana hasil penjualan akan didonasikan untuk amal.',
-            'departement_id' => Helper::getDepartementId('Kewirausahaan')
+            'departement_id' => Helper::getDepartementId('KWU')
         ]);
 
         WorkProgram::create([
             'name' => 'Baju Angkatan dan Jaket  HMIF',
             'description' => 'Mengadakan penjualan dan mengurus baju angkatan untuk mahasiswa baru dan jaket jurusan untuk mahasiswa informatika sebagai upaya kebersamaan dalam identitas atau almamater tambahan di jurusan Teknik informatika dan sebagai identitas Angkatan Teknik Informatika.',
-            'departement_id' => Helper::getDepartementId('Kewirausahaan')
+            'departement_id' => Helper::getDepartementId('KWU')
         ]);
 
         WorkProgram::create([

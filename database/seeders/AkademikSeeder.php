@@ -34,7 +34,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Kadiv',
             'photo' => 'akademik/bph/dewa_sheva_dzaky.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Committee::create([
@@ -42,7 +42,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Kadiv',
             'photo' => 'akademik/bph/jovanic_morgan.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Ilmu Pengetahuan (PIP)')
+            'division_id' => Helper::getDivisionId('PIP')
         ]);
 
         Staff::create([
@@ -50,7 +50,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/adnan_al_qadri.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -58,7 +58,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/ahmad_azhari.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -66,7 +66,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/akbar_alfaidah.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -74,7 +74,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/farhan_nugraha.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -82,7 +82,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/iman_carrazi_syamsidi.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -90,7 +90,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/karina_may.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -98,7 +98,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/m_adrian.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -106,7 +106,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/m_rifqi_edrial.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -114,7 +114,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/zildjian_vito_sulaiman.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Teknologi Informasi (PTI)')
+            'division_id' => Helper::getDivisionId('PTI')
         ]);
 
         Staff::create([
@@ -122,7 +122,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/m_dzawil_fadhol_abidullah.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Ilmu Pengetahuan (PIP)')
+            'division_id' => Helper::getDivisionId('PIP')
         ]);
 
         Staff::create([
@@ -130,7 +130,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/m_davero_firmansyah.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Ilmu Pengetahuan (PIP)')
+            'division_id' => Helper::getDivisionId('PIP')
         ]);
 
         Staff::create([
@@ -138,7 +138,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/m_fathan_mukhlisan.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Ilmu Pengetahuan (PIP)')
+            'division_id' => Helper::getDivisionId('PIP')
         ]);
 
         Staff::create([
@@ -146,7 +146,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/philifs_bryan_sipahutar.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Ilmu Pengetahuan (PIP)')
+            'division_id' => Helper::getDivisionId('PIP')
         ]);
 
         Staff::create([
@@ -154,7 +154,7 @@ class AkademikSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'akademik/staff/risky_armansyah.png',
             'departement_id' => Helper::getDepartementId('Akademik'),
-            'division_id' => Helper::getDivisionId('Pengembangan Ilmu Pengetahuan (PIP)')
+            'division_id' => Helper::getDivisionId('PIP')
         ]);
     }
 }

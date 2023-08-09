@@ -10,15 +10,15 @@ use Illuminate\Support\Facades\Storage;
 
 class Helper
 {
-    public static function getDepartementId($name)
+    public static function getDepartementId($alias)
     {
-        $deparetement = Departement::where('name', $name)->first();
+        $deparetement = Departement::where('alias', $alias)->first();
         return $deparetement->id;
     }
 
-    public static function getDivisionId($name)
+    public static function getDivisionId($alias)
     {
-        $division = Division::where('name', $name)->first();
+        $division = Division::where('alias', $alias)->first();
         return $division->id;
     }
 
@@ -50,8 +50,8 @@ class Helper
             ->where('departement_id', $departement->id)
             ->get()
             ->map(function ($item) {
-                $divisionName = $item->division ? $item->division->name : null;
-                $position = $item->position . ($divisionName ? " " . $divisionName : " " . $item->departement->name);
+                $divisionName = $item->division ? $item->division->alias : null;
+                $position = $item->position . ($divisionName ? " " . $divisionName : " " . $item->departement->alias);
                 return [
                     'nama' => $item->name,
                     'jabatan' => $position,

@@ -34,7 +34,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Kadiv',
             'photo' => 'kominfo/bph/yolendri_anisyahfitri.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
+            'division_id' => Helper::getDivisionId('Humas')
         ]);
 
         Committee::create([
@@ -49,7 +49,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/diva_sarasvati_azzahra.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
+            'division_id' => Helper::getDivisionId('Humas')
         ]);
 
         Staff::create([
@@ -57,7 +57,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/hifzhan_jayyid.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
+            'division_id' => Helper::getDivisionId('Humas')
         ]);
 
         Staff::create([
@@ -65,7 +65,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/m_ikram.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
+            'division_id' => Helper::getDivisionId('Humas')
         ]);
 
         Staff::create([
@@ -73,7 +73,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/m_ramadhan_syaputra.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
+            'division_id' => Helper::getDivisionId('Humas')
         ]);
 
         Staff::create([
@@ -81,7 +81,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/nanda_ramadhani_fitri.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
+            'division_id' => Helper::getDivisionId('Humas')
         ]);
 
         Staff::create([
@@ -89,7 +89,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/putri_hidayahni.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Hubungan Masyarakat (HUMAS)')
+            'division_id' => Helper::getDivisionId('Humas')
         ]);
 
         Staff::create([
@@ -97,7 +97,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/aida_zahwa.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
 
         Staff::create([
@@ -105,7 +105,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/evan_febrian.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
 
         Staff::create([
@@ -113,7 +113,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/jimmy_maulana.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
 
         Staff::create([
@@ -121,7 +121,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/m_harry_mahardhika_t.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
 
         Staff::create([
@@ -129,7 +129,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/m_farid_saputra.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
 
         Staff::create([
@@ -137,7 +137,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/m_fahrezi.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
 
         Staff::create([
@@ -145,7 +145,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/m_haris_alvaro.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
 
         Staff::create([
@@ -153,7 +153,7 @@ class KominfoSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kominfo/staff/m_luthfi_jamal.png',
             'departement_id' => Helper::getDepartementId('Kominfo'),
-            'division_id' => Helper::getDivisionId('Multimedia (MULMED)')
+            'division_id' => Helper::getDivisionId('Mulmed')
         ]);
     }
 }

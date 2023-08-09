@@ -34,7 +34,7 @@ class KastradSeeder extends Seeder
             'position' => 'Kadiv',
             'photo' => 'kastrad/bph/m_rusnan_arkan.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
+            'division_id' => Helper::getDivisionId('Polpro')
         ]);
 
         Committee::create([
@@ -42,7 +42,7 @@ class KastradSeeder extends Seeder
             'position' => 'Kadiv',
             'photo' => 'kastrad/bph/m_fairuz_abadi.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')
+            'division_id' => Helper::getDivisionId('Adkam')
         ]);
 
         Staff::create([
@@ -50,7 +50,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/achmad_rausyan_fiker.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
+            'division_id' => Helper::getDivisionId('Polpro')
         ]);
 
         Staff::create([
@@ -58,7 +58,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/ahmad_afif.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
+            'division_id' => Helper::getDivisionId('Polpro')
         ]);
 
         Staff::create([
@@ -66,7 +66,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/faradilla_maulia.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
+            'division_id' => Helper::getDivisionId('Polpro')
         ]);
 
         Staff::create([
@@ -74,7 +74,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/m_rafi_wisesa_colletta_anindhita.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
+            'division_id' => Helper::getDivisionId('Polpro')
         ]);
 
         Staff::create([
@@ -82,7 +82,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/naufal_abrar_abhista.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
+            'division_id' => Helper::getDivisionId('Polpro')
         ]);
 
         Staff::create([
@@ -90,7 +90,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/syavira_amalia.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Politik Propaganda (POLPRO)')
+            'division_id' => Helper::getDivisionId('Polpro')
         ]);
 
         Staff::create([
@@ -98,7 +98,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/ayu_puspita_sari.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')
+            'division_id' => Helper::getDivisionId('Adkam')
         ]);
 
         Staff::create([
@@ -106,7 +106,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/fascal_harya_putra.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')
+            'division_id' => Helper::getDivisionId('Adkam')
         ]);
 
         Staff::create([
@@ -114,7 +114,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/ksatria.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')
+            'division_id' => Helper::getDivisionId('Adkam')
         ]);
 
         Staff::create([
@@ -122,7 +122,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/m_nurhadi.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')
+            'division_id' => Helper::getDivisionId('Adkam')
         ]);
 
         Staff::create([
@@ -130,7 +130,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/rhaudy_nahavira.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')
+            'division_id' => Helper::getDivisionId('Adkam')
         ]);
 
         Staff::create([
@@ -138,7 +138,7 @@ class KastradSeeder extends Seeder
             'position' => 'Staff',
             'photo' => 'kastrad/staff/shatia_earlangga_pratama.png',
             'departement_id' => Helper::getDepartementId('Kastrad'),
-            'division_id' => Helper::getDivisionId('Advokasi Kampus (ADKAM)')
+            'division_id' => Helper::getDivisionId('Adkam')
         ]);
     }
 }

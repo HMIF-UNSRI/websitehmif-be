@@ -55,7 +55,7 @@ class Helper
                 return [
                     'nama' => $item->name,
                     'jabatan' => $position,
-                    'foto' => Storage::url($item->photo),
+                    'foto' => env('APP_URL') . Storage::url($item->photo),
                 ];
             });
     }

@@ -175,4 +175,29 @@ class DepartementController extends Controller
             'staff' => $staff,
         ]);
     }
+
+    /**
+     * Get PSDM Data
+     * 
+     * Endpoint ini digunakan untuk mendapatkan data dari dinas psdm.
+     */
+    public function psdm()
+    {
+        $psdm = Departement::where('alias', 'PSDM')->firstOrFail();
+
+        $divisi = Helper::getDivisionsData($psdm);
+        $prokerUnggulan = Helper::getWorkProgramsData($psdm);
+        $bph = Helper::getMembersData($psdm, 'committees');
+        $staff = Helper::getMembersData($psdm, 'staffs');
+
+        return response()->json([
+            'nama' => $psdm->name,
+            'logo' => env('APP_URL') . Storage::url($psdm->logo),
+            'deskripsi' => $psdm->description,
+            'divisi' => $divisi,
+            'proker_unggulan' => $prokerUnggulan,
+            'bph' => $bph,
+            'staff' => $staff,
+        ]);
+    }
 }

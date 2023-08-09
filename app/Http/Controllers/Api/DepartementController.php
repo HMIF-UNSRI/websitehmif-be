@@ -150,4 +150,29 @@ class DepartementController extends Controller
             'staff' => $staff,
         ]);
     }
+
+    /**
+     * Get PMB Data
+     * 
+     * Endpoint ini digunakan untuk mendapatkan data dari dinas pmb.
+     */
+    public function pmb()
+    {
+        $pmb = Departement::where('alias', 'PMB')->firstOrFail();
+
+        $divisi = Helper::getDivisionsData($pmb);
+        $prokerUnggulan = Helper::getWorkProgramsData($pmb);
+        $bph = Helper::getMembersData($pmb, 'committees');
+        $staff = Helper::getMembersData($pmb, 'staffs');
+
+        return response()->json([
+            'nama' => $pmb->name,
+            'logo' => env('APP_URL') . Storage::url($pmb->logo),
+            'deskripsi' => $pmb->description,
+            'divisi' => $divisi,
+            'proker_unggulan' => $prokerUnggulan,
+            'bph' => $bph,
+            'staff' => $staff,
+        ]);
+    }
 }

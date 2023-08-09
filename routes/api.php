@@ -18,3 +18,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('inti', [DepartementController::class, 'inti']);
 Route::get('akademik', [DepartementController::class, 'akademik']);
 Route::get('administrasi', [DepartementController::class, 'administrasi']);
+Route::get('kastrad', [DepartementController::class, 'kastrad']);

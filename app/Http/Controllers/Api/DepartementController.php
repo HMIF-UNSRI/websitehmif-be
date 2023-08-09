@@ -75,4 +75,29 @@ class DepartementController extends Controller
             'staff' => $staff,
         ]);
     }
+
+    /**
+     * Get Kastrad Data
+     * 
+     * Endpoint ini digunakan untuk mendapatkan data dari dinas kastrad.
+     */
+    public function kastrad()
+    {
+        $kastrad = Departement::where('alias', 'Kastrad')->firstOrFail();
+
+        $divisi = Helper::getDivisionsData($kastrad);
+        $prokerUnggulan = Helper::getWorkProgramsData($kastrad);
+        $bph = Helper::getMembersData($kastrad, 'committees');
+        $staff = Helper::getMembersData($kastrad, 'staffs');
+
+        return response()->json([
+            'nama' => $kastrad->name,
+            'logo' => env('APP_URL') . Storage::url($kastrad->logo),
+            'deskripsi' => $kastrad->description,
+            'divisi' => $divisi,
+            'proker_unggulan' => $prokerUnggulan,
+            'bph' => $bph,
+            'staff' => $staff,
+        ]);
+    }
 }

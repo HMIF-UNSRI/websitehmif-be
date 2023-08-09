@@ -20,3 +20,4 @@ Route::get('akademik', [DepartementController::class, 'akademik']);
 Route::get('administrasi', [DepartementController::class, 'administrasi']);
 Route::get('kastrad', [DepartementController::class, 'kastrad']);
 Route::get('kominfo', [DepartementController::class, 'kominfo']);
+Route::get('kwu', [DepartementController::class, 'kwu']);

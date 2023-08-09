@@ -125,4 +125,29 @@ class DepartementController extends Controller
             'staff' => $staff,
         ]);
     }
+
+    /**
+     * Get KWU Data
+     * 
+     * Endpoint ini digunakan untuk mendapatkan data dari dinas kwu.
+     */
+    public function kwu()
+    {
+        $kwu = Departement::where('alias', 'KWU')->firstOrFail();
+
+        $divisi = Helper::getDivisionsData($kwu);
+        $prokerUnggulan = Helper::getWorkProgramsData($kwu);
+        $bph = Helper::getMembersData($kwu, 'committees');
+        $staff = Helper::getMembersData($kwu, 'staffs');
+
+        return response()->json([
+            'nama' => $kwu->name,
+            'logo' => env('APP_URL') . Storage::url($kwu->logo),
+            'deskripsi' => $kwu->description,
+            'divisi' => $divisi,
+            'proker_unggulan' => $prokerUnggulan,
+            'bph' => $bph,
+            'staff' => $staff,
+        ]);
+    }
 }

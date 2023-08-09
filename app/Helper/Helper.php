@@ -48,6 +48,8 @@ class Helper
 
         return $model::with(['departement', 'division'])
             ->where('departement_id', $departement->id)
+            ->orderBy('division_id')
+            ->orderBy('name')
             ->get()
             ->map(function ($item) {
                 $divisionName = $item->division ? $item->division->alias : null;
@@ -61,7 +63,7 @@ class Helper
                         $position = $item->position . ($divisionName ? " " . $divisionName : " " . $item->departement->alias);
                     }
                 }
-                
+
                 return [
                     'nama' => $item->name,
                     'jabatan' => $position,

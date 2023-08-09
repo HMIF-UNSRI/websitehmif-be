@@ -10,7 +10,24 @@ use Illuminate\Support\Facades\Storage;
 class DepartementController extends Controller
 {
     /**
-     * Get Data Akadmik
+     * Get Data Inti
+     * 
+     * Endpoint ini digunakan untuk mendapatkan data dari dinas inti.
+     */
+    public function inti()
+    {
+        $akademik = Departement::where('name', 'Inti')->firstOrFail();
+
+        $bph = Helper::getMembersData($akademik, 'committees');
+
+        return response()->json([
+            'nama' => $akademik->name,
+            'bph' => $bph,
+        ]);
+    }
+
+    /**
+     * Get Data Akademik
      * 
      * Endpoint ini digunakan untuk mendapatkan data dari dinas akademik.
      */

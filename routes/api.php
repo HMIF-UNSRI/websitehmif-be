@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\DepartementController;
+use App\Http\Controllers\Api\IfCaringController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -23,3 +24,5 @@ Route::get('kominfo', [DepartementController::class, 'kominfo']);
 Route::get('kwu', [DepartementController::class, 'kwu']);
 Route::get('pmb', [DepartementController::class, 'pmb']);
 Route::get('psdm', [DepartementController::class, 'psdm']);
+
+Route::post('/api/submit-if-caring', [IfCaringController::class, 'submitIfCaring']);

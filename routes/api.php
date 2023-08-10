@@ -23,3 +23,5 @@ Route::get('kominfo', [DepartementController::class, 'kominfo']);
 Route::get('kwu', [DepartementController::class, 'kwu']);
 Route::get('pmb', [DepartementController::class, 'pmb']);
 Route::get('psdm', [DepartementController::class, 'psdm']);
+
+// Route::get('berita', [])

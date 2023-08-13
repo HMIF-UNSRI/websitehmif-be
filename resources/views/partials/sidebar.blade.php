@@ -27,12 +27,12 @@
                             <span class="nk-menu-text">Dashboard</span>
                         </a>
                     </li>
-                    {{-- <li class="nk-menu-item">
+                    <li class="nk-menu-item">
                         <a href="{{ route('berita.index') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-news"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-article"></em></span>
                             <span class="nk-menu-text">Berita</span>
                         </a>
-                    </li> --}}
+                    </li>
                 </ul>
             </div>
         </div>

@@ -19,4 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+Route::get('/berita', [DashboardController::class, 'index'])->name('berita.index');
 

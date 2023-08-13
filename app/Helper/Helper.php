@@ -46,11 +46,15 @@ class Helper
     {
         $model = $type === 'committees' ? Committee::class : Staff::class;
 
-        return $model::with(['departement', 'division'])
-            ->where('departement_id', $departement->id)
-            ->orderBy('division_id')
-            ->orderBy('name')
-            ->get()
+        $query = $model::with(['departement', 'division'])
+            ->where('departement_id', $departement->id);
+
+        if ($type !== 'committees') {
+            $query->orderBy('division_id')
+                ->orderBy('name');
+        }
+
+        return $query->get()
             ->map(function ($item) {
                 $divisionName = $item->division ? $item->division->alias : null;
 

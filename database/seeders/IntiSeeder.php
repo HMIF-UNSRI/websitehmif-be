@@ -36,16 +36,16 @@ class IntiSeeder extends Seeder
         ]);
 
         Committee::create([
-            'name' => 'Dellin Irawan',
-            'position' => 'Bendahara Umum I',
-            'photo' => 'inti/bph/dellin_irawan.png',
+            'name' => 'Vanya Terra Ardani',
+            'position' => 'Sekretaris Umum II',
+            'photo' => 'inti/bph/vanya_terra_ardani.png',
             'departement_id' => Helper::getDepartementId('Inti')
         ]);
 
         Committee::create([
-            'name' => 'Vanya Terra Ardani',
-            'position' => 'Sekretaris Umum II',
-            'photo' => 'inti/bph/vanya_terra_ardani.png',
+            'name' => 'Dellin Irawan',
+            'position' => 'Bendahara Umum I',
+            'photo' => 'inti/bph/dellin_irawan.png',
             'departement_id' => Helper::getDepartementId('Inti')
         ]);
 

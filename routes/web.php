@@ -1,6 +1,8 @@
 <?php
 
+
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -15,8 +17,10 @@ use App\Http\Controllers\DashboardController;
 */
 
 Route::get('/', function () {
-    return redirect()->route('dashboard.index');
+    return redirect()->route('auth.login');
 });
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
-
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard.index')->middleware('auth');;
+Route::get('/login', [AuthController::class, 'loginView'])->name('auth.login');
+Route::post('/login', [AuthController::class, 'login'])->name('auth.postLogin');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');

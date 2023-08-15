@@ -28,7 +28,16 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form method="POST">
+                                <div class="card-body">
+                                    @if ($errors->any())
+                                        <div class="alert alert-danger" role="alert">
+                                            @foreach ($errors->all() as $error)
+                                            {{ $error }}
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                </div>
+                                <form action="{{route('auth.postLogin')}}" method="POST">
                                     @csrf
                                     <div class="form-group">
                                         <div class="form-label-group">

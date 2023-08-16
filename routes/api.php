@@ -26,3 +26,4 @@ Route::get('pmb', [DepartementController::class, 'pmb']);
 Route::get('psdm', [DepartementController::class, 'psdm']);
 
 Route::get('berita', [ArticleController::class, 'getArticles']);
+Route::get('berita/{slug}', [ArticleController::class, 'getArticle']);

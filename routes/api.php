@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\DepartementController;
+use App\Http\Controllers\Api\ArticleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,4 +25,4 @@ Route::get('kwu', [DepartementController::class, 'kwu']);
 Route::get('pmb', [DepartementController::class, 'pmb']);
 Route::get('psdm', [DepartementController::class, 'psdm']);
 
-// Route::get('berita', [])
+Route::get('berita', [ArticleController::class, 'getArticles']);

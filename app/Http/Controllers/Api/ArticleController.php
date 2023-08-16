@@ -1,17 +1,20 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-
-    public function getAllArticles()
+    //
+    public function getArticles()
     {
-    }
+        $articles = Article::all();
 
-    public function getArticle()
-    {
+        return response()->json([
+            'title' => $articles->title,
+        ]);
     }
 }

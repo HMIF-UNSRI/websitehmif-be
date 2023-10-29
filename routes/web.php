@@ -24,7 +24,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 Route::get('/berita', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/berita/create', [ArticleController::class, 'create'])->name('article.create');
 Route::post('/berita', [ArticleController::class, 'store'])->name('article.store');
-Route::get('/berita/{slug}', [ArticleController::class, 'show'])->name('article.show');
+Route::get('/berita/{slug}/show', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/berita/{slug}/edit', [ArticleController::class, 'edit'])->name('article.edit');
 Route::put('/berita/{slug}', [ArticleController::class, 'update'])->name('article.update');
 Route::delete('/berita/{slug}', [ArticleController::class, 'delete'])->name('article.delete');

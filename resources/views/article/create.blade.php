@@ -49,7 +49,7 @@
                                     <div class="form-control-wrap">
                                         <input type="text" id="title"
                                             class="form-control @error('title') is-invalid @enderror" name="title"
-                                            placeholder="Contoh: " value="{{ old('title') }}" required>
+                                            placeholder="Contoh: 10 manusia sejago leonel messi " value="{{ old('title') }}" required>
                                         @error('title')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
@@ -62,7 +62,7 @@
                                     <div class="form-control-wrap">
                                         <input type="text" id="slug"
                                             class="form-control @error('slug') is-invalid @enderror" name="slug"
-                                            placeholder="Contoh: 081368687789" value="{{ old('slug') }}" required>
+                                            placeholder="Automatic by title" value="{{ old('slug') }}" required>
                                         @error('slug')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
@@ -74,7 +74,7 @@
                                     <label class="form-label" for="description">Deskripsi</label>
                                     <div class="form-control-wrap">
                                         <textarea id="description" class="form-control no-resize @error('description') is-invalid @enderror" name="description"
-                                            placeholder="Contoh: 081368687789" value="{{ old('description') }}" required></textarea>
+                                            placeholder="Contoh: Ya jelas tidak ada" value="{{ old('description') }}" required></textarea>
                                         @error('description')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror

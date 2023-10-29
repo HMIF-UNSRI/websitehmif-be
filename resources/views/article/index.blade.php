@@ -59,8 +59,6 @@
                                 </th>
                                 <th class="text-nowrap text-center align-middle">Thumbnail
                                 </th>
-                                <th class="text-nowrap text-center align-middle">Konten
-                                </th>
                                 <th class="text-nowrap text-center no-export align-middle">Aksi</th>
                             </tr>
                         </thead>
@@ -71,12 +69,15 @@
                                     <td>{{ $article->title }}</td>
                                     <td>{{ $article->description }}</td>
                                     <td>
-                                        <img src="{{ asset('/storage/' . $article->thumbnail) }}" class="img-fluid rounded"
+                                        <img src="{{ Storage::url($article->thumbnail) }}" class="img-fluid rounded"
                                             style="width: 150px">
                                     </td>
-                                    <td>{!! $article->content !!}</td>
 
                                     <td class="text-nowrap justify-content-center align-items-center text-center">
+                                        <a href="{{ route('article.show', $article->slug) }}"
+                                            class="btn btn-primary btn-xs rounded-pill">
+                                            <em class="ni ni-eye"></em>
+                                        </a>
                                         <a href="{{ route('article.edit', $article->slug) }}"
                                             class="btn btn-warning btn-xs rounded-pill">
                                             <em class="ni ni-edit"></em>

@@ -28,15 +28,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form method="POST">
+                                <form action="{{ route('login') }}" method="POST">
                                     @csrf
                                     <div class="form-group">
                                         <div class="form-label-group">
-                                            <label class="form-label" for="email">Email</label>
+                                            <label class="form-label" for="email">Username</label>
                                         </div>
                                         <div class="form-control-wrap">
                                             <input type="text" class="form-control form-control-lg" id="email"
-                                                name="email" placeholder="Masukkan email anda">
+                                                name="username" placeholder="Masukkan email anda">
                                         </div>
                                     </div>
                                     <div class="form-group">

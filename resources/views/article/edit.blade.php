@@ -8,34 +8,20 @@
     <script src="{{ asset('assets/js/libs/editors/summernote.js?ver=3.0.3') }}"></script>
     <script src="{{ asset('assets/js/editors.js?ver=3.0.3') }}"></script>
     <script>
-        function previewThumbnail(event) {
-            var input = event.target;
-            var preview = document.getElementById('thumbnail-preview');
-
-            if (input.files && input.files[0]) {
-                var reader = new FileReader();
-
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
+        $(document).ready(function() {
+            var oldThumbnail = "{{ Storage::url($article->thumbnail) }}";
+            $("#thumbnail-preview-old").attr("src", oldThumbnail);
+            $("#thumbnail").change(function() {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        $("#thumbnail-preview-old").css("display", "none"); // Hide old image
+                        $("#thumbnail-preview-new").attr("src", e.target.result);
+                        $("#thumbnail-preview-new").css("display", "block");
+                    };
+                    reader.readAsDataURL(this.files[0]);
                 }
-
-                reader.readAsDataURL(input.files[0]);
-            } else {
-                preview.src = "{{ $article->thumbnail ? asset('storage/' . $article->thumbnail) : '#' }}";
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function() {
-            var thumbnailInput = document.getElementById('thumbnail');
-            thumbnailInput.addEventListener('change', previewThumbnail);
-
-            // Load existing thumbnail on page load
-            var preview = document.getElementById('thumbnail-preview');
-            if ("{{ $article->thumbnail }}") {
-                preview.src = "{{ asset('storage/' . $article->thumbnail) }}";
-            } else {
-                preview.src = "#";
-            }
+            });
         });
     </script>
 
@@ -106,15 +92,15 @@
                                     <div class="form-control-wrap">
                                         <input type="file" id="thumbnail"
                                             class="form-control @error('thumbnail') is-invalid @enderror" name="thumbnail"
-                                            placeholder="Contoh: B/735-11/02/01/Smh" required accept="image/*"
-                                            onchange="previewThumbnail(event)">
+                                            placeholder="Contoh: B/735-11/02/01/Smh" value="{{ Storage::url($article->thumbnail)}}">
                                         @error('thumbnail')
                                             <div class="invalid-feedback">{{ $message }}</div>
                                         @enderror
                                     </div>
-                                    <img id="thumbnail-preview" class="img-fluid rounded-1 h-30 w-15 mt-2 shadow-sm"
-                                        src="{{ $article->thumbnail ? asset('storage/' . $article->thumbnail) : '#' }}"
-                                        alt="Thumbnail Preview">
+                                    <img id="thumbnail-preview-old" class="img-fluid rounded-1 h-30 w-15 mt-2 shadow-sm"
+                                        src="{{ Storage::url($article->thumbnail) }}" alt="Thumbnail Preview">
+                                    <img id="thumbnail-preview-new" class="img-fluid rounded-1 h-30 w-15 mt-2 shadow-sm"
+                                        style="display: none" alt="New Thumbnail Preview">
 
 
                                 </div>

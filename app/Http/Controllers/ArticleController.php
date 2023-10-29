@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use DOMDocument;
 use App\Models\Article;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -27,90 +28,85 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required',
+            'slug' => 'required',
             'description' => 'required',
-            'thumbnail' => 'required|file|mimes:png,jpg',
+            'thumbnail' => 'required|file|mimes:png,jpg,jpeg',
             'content' => 'required',
         ]);
 
-        $slug = Str::slug($request->title, '-');
-        $uniqueSlug = $this->makeUniqueSlug($slug);
+        $uniqueSlug = $this->makeUniqueSlug($request->slug);
 
-        $thumbnail = "thumbnail/$uniqueSlug" . "." . $request->thumbnail->getClientOriginalExtension();
+        $uploadedFile = $request->file('thumbnail');
+        $originalName = $uploadedFile->getClientOriginalName();
+        $thumbnailName = "$uniqueSlug" . '-' . $originalName;
+        $thumbnailPath = $uploadedFile->storeAs('public/thumbnail', $thumbnailName);
 
-        $data = [
-            'title' => $request->title,
-            'slug' => $uniqueSlug,
-            'description' => $request->description,
-            'thumbnail' => $thumbnail,
-            'content' => $request->content,
-        ];
+        $content = $request->content;
+        $dom = new \DomDocument();
+        $dom->loadHtml($content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
+        $images = $dom->getElementsByTagName('img');
 
-        // Create article
-        $article = Article::create($data);
+        foreach ($images as $k => $img) {
+            $data = $img->getAttribute('src');
+            list($type, $data) = explode(';', $data);
+            list(, $data) = explode(',', $data);
+            $data = base64_decode($data);
+            $image_name = "articles/$uniqueSlug" . time() . $k . '.png';
+            Storage::put("public/$image_name", $data);
 
-        // Handle thumbnail upload
-        Storage::disk('public')->put($thumbnail, file_get_contents($request->thumbnail));
-
-        // Handle content images
-        if (strpos($request->content, '<img') !== false) {
-            $dom = new \DOMDocument();
-            $dom->loadHTML($article->content, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-
-            $images = $dom->getElementsByTagName('img');
-            foreach ($images as $image) {
-                $src = $image->getAttribute('src');
-                if (strpos($src, 'data:image') === 0) {
-                    list($type, $data) = explode(';', $src);
-                    list(, $data) = explode(',', $data);
-                    $data = base64_decode($data);
-
-                    $filename = 'images/' . Str::random(20) . '.png'; // Or adjust the extension as needed
-                    Storage::disk('public')->put($filename, $data);
-
-                    $newImage = $dom->createElement('img');
-                    $newImage->setAttribute('src', asset('storage/' . $filename));
-                    $newImage->setAttribute('class', 'img-fluid');
-                    $image->parentNode->replaceChild($newImage, $image);
-                }
-            }
-
-            $article->content = $dom->saveHTML(); // Save modified content
-            $article->save();
+            $img->removeAttribute('src');
+            $img->setAttribute('src', env('APP_URL') . Storage::url($image_name));
         }
+
+        $content = $dom->saveHTML();
+
+        $summernote = new Article();
+
+        $summernote->title = $request->title;
+        $summernote->slug = $uniqueSlug;
+        $summernote->thumbnail = $thumbnailPath;
+        $summernote->description = $request->description;
+        $summernote->content = $content;
+
+        $summernote->save();
 
         return redirect()->route('article.index')->with('success', 'Article berhasil ditambahkan.');
     }
 
 
-    public function update(Request $request, $slug)
+    public function update(Request $request, $slug, Article $article)
     {
         $request->validate([
             'title' => 'required',
             'description' => 'required',
-            'thumbnail' => 'image',
+            'thumbnail' => 'file|mimes:png,jpg,jpeg',
             'content' => 'required',
         ]);
+
+        $article = Article::where('slug', $slug)->firstOrFail();
 
         $newSlug = Str::slug($request->title, '-');
         $uniqueSlug = $this->makeUniqueSlug($newSlug, $slug);
 
-        $thumbnail = "thumbnail/$uniqueSlug" . "." . $request->thumbnail->getClientOriginalExtension();
-
         if ($request->hasFile('thumbnail')) {
-            Storage::disk('public')->delete($thumbnail);
+            Storage::delete($article->thumbnail);
 
-            $$thumbnail = "thumbnail/$uniqueSlug" . "." . $request->thumbnail->getClientOriginalExtension();
+            $uploadedFile = $request->file('thumbnail');
+            $originalName = $uploadedFile->getClientOriginalName();
 
-            Storage::disk('public')->put($thumbnail, file_get_contents($request->thumbnail));
+            $thumbnailName = "$uniqueSlug" . '-' . $originalName;
+
+            $thumbnail = $uploadedFile->storeAs('public/thumbnail', $thumbnailName);
+
+            $article->update(['thumbnail' => $thumbnail]);
         }
 
-        $article = Article::where('slug', $slug)->firstOrFail();
         $article->update([
             'title' => $request->title,
             'slug' => $uniqueSlug,
             'description' => $request->description,
             'content' => $request->content,
-            'thumbnail' => $thumbnail,
+
         ]);
 
         return redirect()->route('article.index')->with('success', 'Article updated successfully.');
@@ -119,8 +115,9 @@ class ArticleController extends Controller
 
     public function show($slug)
     {
+        $title = 'Detail Article';
         $article = Article::where('slug', $slug)->firstOrFail();
-        return view('article.show', compact('article'));
+        return view('article.show', compact('article', 'title'));
     }
 
     public function edit($slug)
@@ -133,10 +130,8 @@ class ArticleController extends Controller
     public function delete($slug)
     {
         $article = Article::where('slug', $slug)->firstOrFail();
-        if ($article->thumbnail) {
-            Storage::disk('public')->delete($article->thumbnail);
-        }
-        
+        Storage::delete($article->thumbnail);
+
         $article->delete();
 
         return redirect()->route('article.index')->with('success', 'Article deleted successfully.');

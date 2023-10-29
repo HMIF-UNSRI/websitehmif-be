@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\UserSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -31,7 +32,8 @@ class DatabaseSeeder extends Seeder
             KominfoSeeder::class,
             KewirausahaanSeeder::class,
             PmbSeeder::class,
-            PsdmSeeder::class
+            PsdmSeeder::class,
+            UserSeeder::class
         ]);
     }
 }

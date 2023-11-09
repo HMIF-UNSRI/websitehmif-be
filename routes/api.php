@@ -25,4 +25,4 @@ Route::get('kwu', [DepartementController::class, 'kwu']);
 Route::get('pmb', [DepartementController::class, 'pmb']);
 Route::get('psdm', [DepartementController::class, 'psdm']);
 
-Route::post('/api/submit-if-caring', [IfCaringController::class, 'submitIfCaring']);
+Route::post('/if-caring', [IfCaringController::class, 'submitIfCaring']);

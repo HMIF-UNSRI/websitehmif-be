@@ -8,20 +8,27 @@ use Illuminate\Http\Request;
 
 class IfCaringController extends Controller
 {
+    /**
+     * Submit If Caring
+     * 
+     * Endpoint ini digunakan untuk menyimpan data dari form aspirasi if caring.
+     */
     public function submitIfCaring(Request $request)
     {
         $validatedData = $request->validate([
-            'id' => 'required|integer',
             'email' => 'required|email',
-            'full_name' => 'required|string',
-            'nim' => 'required|string',
-            'generation' => 'required|integer',
-            'class' => 'required|string',
-            'whatsapp_number' => 'required|string',
-            'aspiration_form' => 'rquired|string|max:1000'
+            'full_name' => 'required',
+            'nim' => 'required',
+            'batch' => 'required',
+            'class' => 'required',
+            'whatsapp_number' => 'required',
+            'aspiration_form' => 'required'
         ]);
-        $ifCaringData = IfCaring::create($validatedData);
 
-        return response ()->json(['message' => 'Data saved succesfully',201]);
+        IfCaring::create($validatedData);
+
+        return response()->json([
+            'message' => 'Data berhasil disimpan'
+        ], 201);
     }
 }

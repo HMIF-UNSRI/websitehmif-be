@@ -21,9 +21,9 @@
                                 <div class="user-avatar sm">
                                     <em class="icon ni ni-user-alt"></em>
                                 </div>
-                                {{-- <div class="user-info d-none d-xl-block">
+                                <div class="user-info d-none d-xl-block">
                                     <div class="user-name dropdown-indicator">{{ Auth::user()->name }}</div>
-                                </div> --}}
+                                </div>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-md dropdown-menu-end">
@@ -32,9 +32,9 @@
                                     <div class="user-avatar">
                                         <span class="icon ni ni-user-alt"></span>
                                     </div>
-                                    {{-- <div class="user-info">
+                                    <div class="user-info">
                                         <span class="lead-text">{{ Auth::user()->name }}</span>
-                                    </div> --}}
+                                    </div>
                                 </div>
                             </div>
                             <div class="dropdown-inner">

@@ -36,7 +36,7 @@
                                         </div>
                                         <div class="form-control-wrap">
                                             <input type="text" class="form-control form-control-lg" id="email"
-                                                name="username" placeholder="Masukkan email anda">
+                                                name="username" placeholder="Masukkan username anda">
                                         </div>
                                     </div>
                                     <div class="form-group">
